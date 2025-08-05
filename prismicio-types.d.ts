@@ -3162,7 +3162,7 @@ interface GrantsDocumentData {
   cta_text: prismic.RichTextField;
 
   /**
-   * `slices2` field in *Grants*
+   * Slice Zone field in *Grants*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -4695,6 +4695,39 @@ interface HomepagenewDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   sections: prismic.GroupField<Simplify<HomepagenewDocumentDataSectionsItem>>;
+
+  /**
+   * redirect_label field in *Homepagenew*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepagenew.redirect_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  redirect_label: prismic.RichTextField;
+
+  /**
+   * redirect_button_href field in *Homepagenew*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepagenew.redirect_button_href
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  redirect_button_href: prismic.LinkField;
+
+  /**
+   * redirect_button_label field in *Homepagenew*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepagenew.redirect_button_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  redirect_button_label: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Homepagenew*
