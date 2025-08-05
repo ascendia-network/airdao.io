@@ -17,6 +17,7 @@ const MainBlock = ({
     <section className={styles['main-block-wrapper']}>
       <div className={`container ${styles['main-block']}`}>
         <Label value={redirectLabel} />
+
         <div className={styles['main-block__title-description']}>
           <PrismicRichText
             field={title}
