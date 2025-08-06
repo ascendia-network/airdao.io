@@ -35,7 +35,7 @@ export default function Banner({ data, setShowBanner, nextLink = true }) {
 
   return (
     <div
-      className={styles['banner']}
+      className={styles.banner}
       style={{
         background:
           type === 'error'
