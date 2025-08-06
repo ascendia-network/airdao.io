@@ -12,6 +12,9 @@ export default function Home({ page, header, banner }) {
   const { data } = page;
   const [showBanner, setShowBanner] = useState(banner.data.content.length > 0);
 
+  console.log(banner, 'banner');
+  console.log(showBanner, 'showBanner');
+
   return (
     <div className={styles.homepage}>
       <Seo
