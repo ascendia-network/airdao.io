@@ -10,7 +10,9 @@ import MainBlock from '@/components/Homepage/MainBlock';
 
 export default function Home({ page, header, banner }) {
   const { data } = page;
-  const [showBanner, setShowBanner] = useState(banner.data.content.length > 0);
+  const [showBanner, setShowBanner] = useState(
+    banner?.data.content.length > 0 || false,
+  );
 
   return (
     <div className={styles.homepage}>
