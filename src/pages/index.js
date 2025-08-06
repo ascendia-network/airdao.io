@@ -22,6 +22,7 @@ export default function Home({ page, header, banner }) {
       {showBanner && (
         <Banner data={banner?.data} setShowBanner={setShowBanner} />
       )}
+
       <HeaderWrapper header={header} showBanner={showBanner} />
       <MainBlock
         title={data.title}
