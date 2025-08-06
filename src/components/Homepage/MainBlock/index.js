@@ -1,16 +1,22 @@
 'use client';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import chevron from '@/assets/icons/chevron-additional.svg';
+import { PrismicNextLink } from '@prismicio/next';
 import { PrismicRichText } from '@prismicio/react';
+import Image from 'next/image';
+import chevron from '@/assets/icons/chevron-tail-right.svg';
 import styles from './main-block.module.scss';
+import { Label } from '../Label';
 
-const MainBlock = ({ title, description, sections }) => {
-  const router = useRouter();
-
+const MainBlock = ({
+  title,
+  description,
+  redirectLabel,
+  redirectButtonHref,
+  redirectButtonText,
+}) => {
   return (
     <section className={styles['main-block-wrapper']}>
       <div className={`container ${styles['main-block']}`}>
+        <Label value={redirectLabel} />
         <div className={styles['main-block__title-description']}>
           <PrismicRichText
             field={title}
@@ -25,33 +31,24 @@ const MainBlock = ({ title, description, sections }) => {
             }}
           />
         </div>
-        <div className={styles['main-block__additional-blocks']}>
-          {sections.map(section => (
-            <div
-              key={section.title[0].text}
-              className={styles['main-block__additional-block']}
-              onClick={() => router.push(section.link.url)}
-            >
-              <div className={styles['main-block__additional-block-title']}>
-                <PrismicRichText
-                  field={section.title}
-                  components={{
-                    paragraph: ({ children }) => <div>{children}</div>,
-                  }}
-                />
-                <PrismicRichText
-                  field={section.description}
-                  components={{
-                    paragraph: ({ children }) => <div>{children}</div>,
-                  }}
-                />
-              </div>
-              <div className={styles['main-block__continue-button']}>
-                <Image src={chevron} alt="Continue Button" />
-              </div>
-            </div>
-          ))}
-        </div>
+
+        <PrismicNextLink
+          field={redirectButtonHref}
+          className={styles['redirect-button']}
+        >
+          <PrismicRichText
+            field={redirectButtonText}
+            components={{
+              paragraph: ({ children }) => (
+                <span className={styles['redirect-button__text']}>
+                  {children}
+                </span>
+              ),
+            }}
+          />
+
+          <Image src={chevron} alt="chevron" />
+        </PrismicNextLink>
       </div>
     </section>
   );

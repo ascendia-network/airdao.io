@@ -1,0 +1,19 @@
+.label {
+  border: 1px solid rgba(79, 199, 243, 1);
+  border-radius: 2rem;
+  padding: 0.625rem 1rem;
+}
+
+.label__text {
+  background: linear-gradient(
+    19deg,
+    rgba(79, 199, 243, 1) -24.61%,
+    rgba(152, 34, 255, 1) 175.22%
+  );
+  font-size: 0.875rem;
+  letter-spacing: -0.196px;
+  font-weight: 600;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

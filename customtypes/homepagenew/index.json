@@ -60,6 +60,33 @@
           }
         }
       },
+      "redirect_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "redirect_label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "redirect_button_href": {
+        "type": "Link",
+        "config": {
+          "label": "redirect_button_href",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "redirect_button_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "redirect_button_label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
